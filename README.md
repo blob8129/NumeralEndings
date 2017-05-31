@@ -15,14 +15,14 @@ Library extends integer type to return a correct form of a word.
 Russian words a spelled diffently in this cases:
 - Quantity ends in 1 - As per position in the sentence.
 - Quantity ends in 2,3,4 - Genitive Singular.
-- Quantity ends in 5,6,7,8,9,0,11,12 etc.  - Genitive Plural
+- Quantity ends in 5,6,7,8,9,0,11,12 etc. - Genitive Plural
 
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+
 
 ## Installation
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NumeralEndings'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A tiny library helping to correctly modify russian words depending on the count.'
 
 # This description is used to generate tags and improve search results.
