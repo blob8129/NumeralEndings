@@ -1,0 +1,16 @@
+PODS:
+  - NumeralEndings (0.1.0)
+
+DEPENDENCIES:
+  - NumeralEndings (from `../`)
+
+EXTERNAL SOURCES:
+  NumeralEndings:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NumeralEndings: 0cab69867aafe4796261febfbcb6fe692749f155
+
+PODFILE CHECKSUM: 2859550cbd03e2f9ccd2ddced0edb2ab4bff14c8
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,22 @@
+{
+  "name": "NumeralEndings",
+  "version": "0.1.0",
+  "summary": "A short description of NumeralEndings.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/blob8129@gmail.com/NumeralEndings",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "blob8129@gmail.com": "bloba8129@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/blob8129@gmail.com/NumeralEndings.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NumeralEndings/Classes/**/*"
+}

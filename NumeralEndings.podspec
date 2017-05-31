@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'NumeralEndings'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of NumeralEndings.'
+  s.summary          = 'A tiny library helping to correctly modify russian words depending on the count.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Russian words a spelled diffently in this cases:
+Quantity ends in 1 - As per position in the sentence.
+Quantity ends in 2,3,4 - Genitive Singular.
+Quantity ends in 5,6,7,8,9,0,11,12 etc.  - Genitive Plural
+Library extends integer type to return a correct form of a word.
                        DESC
 
-  s.homepage         = 'https://github.com/blob8129@gmail.com/NumeralEndings'
+  s.homepage         = 'https://github.com/blob8129/NumeralEndings'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'blob8129@gmail.com' => 'bloba8129@gmail.com' }
-  s.source           = { :git => 'https://github.com/blob8129@gmail.com/NumeralEndings.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/blob8129/NumeralEndings.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
