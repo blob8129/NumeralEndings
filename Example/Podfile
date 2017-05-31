@@ -1,0 +1,6 @@
+use_frameworks!
+target 'NumeralEndings_Tests' do
+  pod 'NumeralEndings', :path => '../'
+  
+  
+end
