@@ -7,11 +7,16 @@
 
 # Numeral Endings
 
+A tiny library helping to correctly modify russian words depending on the count.
+
+## Features
+
+Library extends integer type to return a correct form of a word.
 Russian words a spelled diffently in this cases:
 - Quantity ends in 1 - As per position in the sentence.
 - Quantity ends in 2,3,4 - Genitive Singular.
 - Quantity ends in 5,6,7,8,9,0,11,12 etc.  - Genitive Plural
-Library extends integer type to return a correct form of a word.
+
 
 ## Example
 
@@ -40,14 +45,14 @@ let counted = count.toNumeralEndingString(first: "организация", secon
 let counted = count.toNumeralEndingString(first: "день", second: "дня", third: "дней")
 "До конца отпуска \(count) \(counted)"
 // До конца отпуска 1 день
-// До конца отпуска 20 дня
+// До конца отпуска 2 дня
 // До конца отпуска 36 дней
 
 ```
 
 ## Author
 
-blob8129@gmail.com, bloba8129@gmail.com
+Andrey Volobyev blob8129@gmail.com
 
 ## License
 
