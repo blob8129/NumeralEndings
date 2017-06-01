@@ -36,17 +36,28 @@ pod "NumeralEndings"
 
 ```swift
 
-let counted = count.toNumeralEndingString(first: "организация", second: "организации", third: "организаций")
+let count: Int
+
+let counted = count.toNumeralEndingString(commonPart: "организаци", oneOf:"я", twoOf: "ии", fiveOf: "ий")
 "В нашем каталоге \(count) \(counted)"
 // "В нашем каталоге 1 орагнизация"
 // "В нашем каталоге 2 орагнизации"
 // "В нашем каталоге 100 орагнизаций"
 
-let counted = count.toNumeralEndingString(first: "день", second: "дня", third: "дней")
-"До конца отпуска \(count) \(counted)"
+let counted = count.toNumeralEndingString(commonPart: "час", twoOf: "а", fiveOf: "ов")
+// "Длительность 1 час"
+// "Длительность 2 часа"
+// "Длительность 5 часов"
+
+let counted = count.toNumeralEndingString(oneOf: "день", twoOf: "дня", fiveOf: "дней")
 // До конца отпуска 1 день
 // До конца отпуска 2 дня
 // До конца отпуска 36 дней
+
+let counted = count.toNumeralEndingString(oneOf: "год", twoOf: "года", fiveOf: "лет")
+// До пенсии 1 год
+// До пенсии 2 года
+// До пенсии 36 лет
 
 ```
 

@@ -8,9 +8,9 @@ class Tests: XCTestCase {
         let first = "час"
         let second = "часа"
         let third = "часов"
-        let counted = 1.toNumeralEndingString(first: first,
-                                              second: second,
-                                              third: third)
+        let counted = 1.toNumeralEndingString(oneOf:first,
+                                              twoOf:second,
+                                              fiveOf:third)
         let expected = "час"
         XCTAssertTrue(counted == expected, "Expected \(expected) not \(counted)")
     }
@@ -19,9 +19,9 @@ class Tests: XCTestCase {
         let first = "час"
         let second = "часа"
         let third = "часов"
-        let counted = 2.toNumeralEndingString(first: first,
-                                              second: second,
-                                              third: third)
+        let counted = 2.toNumeralEndingString(oneOf:first,
+                                              twoOf:second,
+                                              fiveOf:third)
         let expected = "часа"
         XCTAssertTrue(counted == expected, "Expected \(expected) not \(counted)")
     }
@@ -30,9 +30,9 @@ class Tests: XCTestCase {
         let first = "час"
         let second = "часа"
         let third = "часов"
-        let counted = 5.toNumeralEndingString(first: first,
-                                              second: second,
-                                              third: third)
+        let counted = 5.toNumeralEndingString(oneOf:first,
+                                              twoOf:second,
+                                              fiveOf:third)
         let expected = "часов"
         XCTAssertTrue(counted == expected, "Expected \(expected) not \(counted)")
     }
@@ -41,9 +41,9 @@ class Tests: XCTestCase {
         let first = "час"
         let second = "часа"
         let third = "часов"
-        let counted = 5.toNumeralEndingString(first: first,
-                                              second: second,
-                                              third: third)
+        let counted = 5.toNumeralEndingString(oneOf:first,
+                                              twoOf:second,
+                                              fiveOf:third)
         let expected = "часов"
         XCTAssertTrue(counted == expected, "Expected \(expected) not \(counted)")
     }
@@ -52,9 +52,9 @@ class Tests: XCTestCase {
         let first = "час"
         let second = "часа"
         let third = "часов"
-        let counted = 1256.toNumeralEndingString(first: first,
-                                                 second: second,
-                                                 third: third)
+        let counted = 1256.toNumeralEndingString(oneOf:first,
+                                                 twoOf:second,
+                                                 fiveOf:third)
         let expected = "часов"
         XCTAssertTrue(counted == expected, "Expected \(expected) not \(counted)")
     }
@@ -64,7 +64,7 @@ class Tests: XCTestCase {
         let second = "часа"
         let third = "часов"
         let counted = (1...100).map {
-            $0.toNumeralEndingString(first: first, second: second, third: third)
+            $0.toNumeralEndingString(oneOf:first, twoOf:second, fiveOf:third)
         }
         let expected = ["час",
                         "часа",

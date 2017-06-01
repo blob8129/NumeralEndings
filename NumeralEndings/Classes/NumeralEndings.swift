@@ -39,24 +39,27 @@ extension Int {
         return .third;
     }
     
-    public func toNumeralEndingString(first: String, second: String, third: String) -> String {
-        let currentForm: String
+    public func toNumeralEndingString(commonPart common: String = "",
+                                      oneOf: String = "",
+                                      twoOf: String = "",
+                                      fiveOf: String = "") -> String {
+        let ending: String
         switch self.numeralEnding {
         case .first:
-            currentForm = first
+            ending = oneOf
         case .second:
-            currentForm = second
+            ending = twoOf
         case .third:
-            currentForm = third
+            ending = fiveOf
         }
-        return currentForm
+        return "\(common)\(ending)"
     }
 }
 
 // Example
 public func organizationCount(_ count: Int) -> String {
-    let counted = count.toNumeralEndingString(first: "организация",
-                                              second: "организации",
-                                              third: "организаций")
+    let counted = count.toNumeralEndingString(oneOf: "организация",
+                                              twoOf: "организации",
+                                              fiveOf: "организаций")
     return "В нашем каталоге \(count) \(counted)"
 }
