@@ -14,12 +14,15 @@ Russian words a spelled diffently in this cases:
 - Quantity ends in 2,3,4 - Genitive Singular.
 - Quantity ends in 5,6,7,8,9,0,11,12 etc. - Genitive Plural
 
+## Pros 
+
+- Very flexible
+- Small 
+- 100% unit tested 
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-
 
 ## Installation
 
@@ -58,6 +61,18 @@ let counted = count.toNumeralEndingString(oneOf: "год", twoOf: "года", fi
 // До сингулярности 1 год
 // До сингулярности 2 года
 // До сингулярности 36 лет
+
+let counted = count.toNumeralEndingString(format: "1год2года5лет")
+"До сингулярности \(count) \(counted)"
+// До сингулярности 1 год
+// До сингулярности 2 года
+// До сингулярности 36 лет
+
+let counted = count.toNumeralEndingString(format: "яблок1о2а")
+"У вас \(count) \(counted)"
+// У вас 1 яблоко
+// У вас 2 яблока
+// У вас 36 яблок
 
 ```
 

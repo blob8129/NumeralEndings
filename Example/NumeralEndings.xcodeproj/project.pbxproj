@@ -9,18 +9,20 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B15C760DBD9E9ED82B1BF37F /* Pods_NumeralEndings_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F1ACEF67B6BD5A22B99FB2 /* Pods_NumeralEndings_Tests.framework */; };
+		CE8413101EDFEA7900BF8094 /* VisualFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84130F1EDFEA7900BF8094 /* VisualFormatTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11A606CE29D17035EA5033AB /* NumeralEndings.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = NumeralEndings.podspec; path = ../NumeralEndings.podspec; sourceTree = "<group>"; };
+		11A606CE29D17035EA5033AB /* NumeralEndings.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NumeralEndings.podspec; path = ../NumeralEndings.podspec; sourceTree = "<group>"; };
 		20F1ACEF67B6BD5A22B99FB2 /* Pods_NumeralEndings_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumeralEndings_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A23D6188B5F4DDFCADC8C67 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2A23D6188B5F4DDFCADC8C67 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4D58B2036E3BB4B9C23D81E9 /* Pods-NumeralEndings_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumeralEndings_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NumeralEndings_Tests/Pods-NumeralEndings_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5ED0609AC8B69E3CEAECDAFB /* Pods-NumeralEndings_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumeralEndings_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NumeralEndings_Tests/Pods-NumeralEndings_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* NumeralEndings_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeralEndings_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		639C654C5C2C616A943CD5D7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		639C654C5C2C616A943CD5D7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CE84130F1EDFEA7900BF8094 /* VisualFormatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualFormatTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CE84130F1EDFEA7900BF8094 /* VisualFormatTests.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -131,10 +134,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
@@ -223,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8413101EDFEA7900BF8094 /* VisualFormatTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

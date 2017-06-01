@@ -1,5 +1,8 @@
 import Foundation
 
+/// Common1ending2ending5ending
+//  1word2word5word
+public typealias NumeralEndingVisualFormat = String
 
 private enum NumeralEnding: CustomStringConvertible {
     
@@ -53,6 +56,50 @@ extension Int {
             ending = fiveOf
         }
         return "\(common)\(ending)"
+    }
+    
+    public func toNumeralEndingString(format: NumeralEndingVisualFormat) -> String {
+        
+        let pattern = "([а-яА-Я]+)?(\\d+)([а-яА-я]+)"
+        
+        let regEx = try? NSRegularExpression(pattern: pattern, options: [])
+        guard let matches = regEx?.matches(in: format,
+                                           options: [],
+                                           range: NSRange(location: 0, length: format.characters.count)) else {
+                                            return ""
+        }
+        
+        let rangesGroups: [[NSRange]] = matches.map { match in
+            (0..<match.numberOfRanges).map { index in
+                return  match.rangeAt(index)
+            }
+        }
+        
+        let matchedStrings:  [[String]] = rangesGroups.map { group -> [String]  in
+            group.map { range -> String in
+                guard range.length > 0 else { return "" }
+                let start = format.index(format.startIndex, offsetBy: range.location)
+                let endIndex = range.length + range.location
+                let end = format.index(format.startIndex, offsetBy: endIndex)
+                return format[start..<end]
+            }
+        }
+        
+        let result: (common: String, endings: [NumeralEnding : String]) = matchedStrings
+            .enumerated()
+            .reduce((common: "", endings: [NumeralEnding: String]())) { result, offsetElement in
+                var ret = result
+                let (offset, elenemt) = offsetElement
+                if offset == 0 && elenemt.count > 1 && elenemt[1].isEmpty == false {
+                    ret.common = elenemt[1]
+                }
+                if let count = Int(elenemt[2])?.numeralEnding {
+                    let ending = elenemt[3]
+                    ret.endings[count] = ending
+                }
+                return ret
+        }
+        return "\(result.common)\(result.endings[self.numeralEnding] ?? "")"
     }
 }
 
