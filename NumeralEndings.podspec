@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'NumeralEndings'
   s.version          = '0.1.2'
-  s.summary          = 'A tiny library helping to correctly modify russian words depending on the count.'
+  s.summary          = 'A tiny library helping to correctly modify Russian words depending on the count.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

@@ -1,13 +1,10 @@
 # NumeralEndings
 
-[![CI Status](http://img.shields.io/travis/blob8129@gmail.com/NumeralEndings.svg?style=flat)](https://travis-ci.org/blob8129@gmail.com/NumeralEndings)
 [![Version](https://img.shields.io/cocoapods/v/NumeralEndings.svg?style=flat)](http://cocoapods.org/pods/NumeralEndings)
 [![License](https://img.shields.io/cocoapods/l/NumeralEndings.svg?style=flat)](http://cocoapods.org/pods/NumeralEndings)
 [![Platform](https://img.shields.io/cocoapods/p/NumeralEndings.svg?style=flat)](http://cocoapods.org/pods/NumeralEndings)
 
-# Numeral Endings
-
-A tiny library helping to correctly modify russian words depending on the count.
+A tiny library helping to correctly modify Russian words depending on the count.
 
 ## Features
 
@@ -61,9 +58,9 @@ let counted = count.toNumeralEndingString(oneOf: "год", twoOf: "года", fi
 
 ```
 
-## Author
+## Authors
 
-Andrey Volobyev blob8129@gmail.com
+Anton Lagutin, Andrey Volobyev blob8129@gmail.com
 
 ## License
 
