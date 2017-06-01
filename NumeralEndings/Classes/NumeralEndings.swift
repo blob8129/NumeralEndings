@@ -25,21 +25,37 @@ private enum NumeralEnding: CustomStringConvertible {
 
 extension Int {
     
+//    private var numeralEnding: NumeralEnding {
+//        let mod10 = self % 10;
+//        let mod100 = self % 100;
+//        
+//        if (mod10 == 1 && mod100 != 11) {
+//            return .first;
+//        }
+//        
+//        if ((mod10 == 2 && mod100 != 12)
+//            || (mod10 == 3 && mod100 != 13)
+//            || (mod10 == 4 && mod100 != 14)) {
+//            return .second;
+//        }
+//        
+//        return .third;
+//    }
+    
+    /// Gets numeral ending.
     private var numeralEnding: NumeralEnding {
-        let mod10 = self % 10;
-        let mod100 = self % 100;
-        
-        if (mod10 == 1 && mod100 != 11) {
-            return .first;
+        switch (self % 10, self % 100) {
+        case (1, let mod100) where mod100 != 11:
+            return .first
+        case (2, let mod100) where mod100 != 12:
+            return .second
+        case (3, let mod100) where mod100 != 13:
+            return .second
+        case (4, let mod100) where mod100 != 14:
+            return .second
+        default:
+            return .third
         }
-        
-        if ((mod10 == 2 && mod100 != 12)
-            || (mod10 == 3 && mod100 != 13)
-            || (mod10 == 4 && mod100 != 14)) {
-            return .second;
-        }
-        
-        return .third;
     }
     
     public func toNumeralEndingString(commonPart common: String = "",

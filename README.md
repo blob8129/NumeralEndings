@@ -32,7 +32,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "NumeralEndings"
 ```
-## Example
+## Examples
 
 ```swift
 
