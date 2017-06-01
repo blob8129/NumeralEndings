@@ -62,13 +62,13 @@ let counted = count.toNumeralEndingString(oneOf: "год", twoOf: "года", fi
 // До сингулярности 2 года
 // До сингулярности 36 лет
 
-let counted = count.toNumeralEndingString(format: "1год2года5лет")
+let counted = count.toNumeralEndingString(format: "1год 2года 5лет")
 "До сингулярности \(count) \(counted)"
 // До сингулярности 1 год
 // До сингулярности 2 года
 // До сингулярности 36 лет
 
-let counted = count.toNumeralEndingString(format: "яблок1о2а")
+let counted = count.toNumeralEndingString(format: "яблок 1о 2а")
 "У вас \(count) \(counted)"
 // У вас 1 яблоко
 // У вас 2 яблока

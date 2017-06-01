@@ -68,7 +68,7 @@ class VisualFormatTests: XCTestCase {
     func testTo100Hours() {
 
         let counted = (1...100).map {
-            $0.toNumeralEndingString(format: "час2а5ов")
+            $0.toNumeralEndingString(format: "час 2а 5ов")
         }
         let expected = ["час",
                         "часа",

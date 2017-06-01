@@ -76,7 +76,8 @@ extension Int {
     
     public func toNumeralEndingString(format: NumeralEndingVisualFormat) -> String {
         
-        let pattern = "([а-яА-Я]+)?(\\d+)([а-яА-я]+)"
+        //let pattern = "([а-яА-Я]+)?(\\d+)([а-яА-я]+)"
+        let pattern = "([а-яА-Я]+)?\\W*(\\d+)\\s*([а-яА-я]+)\\s*"
         
         let regEx = try? NSRegularExpression(pattern: pattern, options: [])
         guard let matches = regEx?.matches(in: format,
