@@ -78,7 +78,7 @@ let counted = count.toNumeralEndingString(format: "яблок 1о 2а")
 
 ## Authors
 
-Anton Lagutin, Andrey Volobyev blob8129@gmail.com
+Anton Lagutin, Andrey Volobuev blob8129@gmail.com
 
 ## License
 
